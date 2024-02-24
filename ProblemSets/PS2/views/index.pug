@@ -1,11 +1,11 @@
 doctype html
 html
   head
-    title PS3 App
+    h3 PS3 App
   body
     if string
       p String: #{string}
-    if length
+    if length !== null && length !== undefined
       p Length: #{length}
     if paramName
       p Parameter: #{paramName}
