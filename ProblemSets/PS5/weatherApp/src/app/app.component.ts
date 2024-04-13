@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import mockWeather from './mock-weather.json';
+import mockWeather from './mock-weather-data.json';
 
 interface Coordinates {
   lon: number;
