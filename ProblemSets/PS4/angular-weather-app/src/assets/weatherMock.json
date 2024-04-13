@@ -1,0 +1,18 @@
+[
+    {
+        "city": "London",
+        "data": {
+            "temperature": 15,
+            "description": "Partly cloudy",
+            "fromCache": true
+        }
+    },
+    {
+        "city": "New York",
+        "data": {
+            "temperature": 20,
+            "description": "Sunny",
+            "fromCache": false
+        }
+    }
+]
