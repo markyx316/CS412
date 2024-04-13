@@ -1,21 +1,3 @@
-// const express = require('express');
-// const redis = require('redis');
-// require('dotenv').config();
-
-// const app = express();
-// app.use(express.json());
-
-
-// // Import the weather route
-// const weatherRouter = require('./routes/weatherRouter');
-// app.use('/ps5', weatherRouter);
-
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
-
-// index.js
 const express = require('express');
 const redis = require('redis');
 const bodyParser = require('body-parser');
@@ -29,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const redisClient = redis.createClient({
   url: process.env.REDIS_URL
 });
+redisClient.on('error', (err) => console.log('Redis Client Error', err));
 redisClient.connect();
 
 // Import the weather route

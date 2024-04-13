@@ -1,0 +1,15 @@
+<!-- src/app/app.component.html -->
+<div *ngIf="showData">
+  <div *ngFor="let entry of weatherData">
+    <h2>{{ entry.data.name }} Weather</h2>
+    <p><strong>Temperature:</strong> {{ entry.data.main.temp }}K ({{ ((entry.data.main.temp-273.15) | number:'1.0-1') }}°C)</p>
+    <p><strong>Weather:</strong> {{ entry.data.weather[0].main }} - {{ entry.data.weather[0].description }}</p>
+    <p><strong>Wind:</strong> {{ entry.data.wind.speed }} m/s, {{ entry.data.wind.deg }} degrees</p>
+    <p><strong>Humidity:</strong> {{ entry.data.main.humidity }}%</p>
+    <p><strong>Pressure:</strong> {{ entry.data.main.pressure }} hPa</p>
+    <p><strong>Cloudiness:</strong> {{ entry.data.clouds.all }}%</p>
+    <p>Data from cache: {{ entry.fromCache ? 'Yes' : 'No' }}</p>
+  </div>
+</div>
+<button (click)="fetchData()">Fetch Weather Data</button>
+
