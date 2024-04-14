@@ -1,0 +1,186 @@
+[
+    {
+        "data": {
+            "coord": {
+                "lon": -71.0598,
+                "lat": 42.3584
+            },
+            "weather": [
+                {
+                    "id": 803,
+                    "main": "Clouds",
+                    "description": "broken clouds",
+                    "icon": "04d"
+                }
+            ],
+            "base": "stations",
+            "main": {
+                "temp": 285.71,
+                "feels_like": 284.33,
+                "temp_min": 282.62,
+                "temp_max": 287.58,
+                "pressure": 997,
+                "humidity": 50
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 9.26,
+                "deg": 260
+            },
+            "clouds": {
+                "all": 75
+            },
+            "dt": 1713036573,
+            "sys": {
+                "type": 2,
+                "id": 2013408,
+                "country": "US",
+                "sunrise": 1713002732,
+                "sunset": 1713050597
+            },
+            "timezone": -14400,
+            "id": 4930956,
+            "name": "Boston",
+            "cod": 200
+        },
+        "fromCache": false
+    },
+    {
+        "data": {
+            "coord": {
+                "lon": -0.1257,
+                "lat": 51.5085
+            },
+            "weather": [
+                {
+                    "id": 804,
+                    "main": "Clouds",
+                    "description": "overcast clouds",
+                    "icon": "04n"
+                }
+            ],
+            "base": "stations",
+            "main": {
+                "temp": 287.45,
+                "feels_like": 286.92,
+                "temp_min": 285.16,
+                "temp_max": 288.85,
+                "pressure": 1021,
+                "humidity": 76
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 8.75,
+                "deg": 260
+            },
+            "clouds": {
+                "all": 100
+            },
+            "dt": 1713039510,
+            "sys": {
+                "type": 2,
+                "id": 2075535,
+                "country": "GB",
+                "sunrise": 1712984889,
+                "sunset": 1713034397
+            },
+            "timezone": 3600,
+            "id": 2643743,
+            "name": "London",
+            "cod": 200
+        },
+        "fromCache": true
+    },
+    {
+        "data": {
+            "coord": {
+                "lon": 139.6917,
+                "lat": 35.6895
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ],
+            "base": "stations",
+            "main": {
+                "temp": 286.94,
+                "feels_like": 286.62,
+                "temp_min": 284.12,
+                "temp_max": 289.01,
+                "pressure": 1020,
+                "humidity": 86
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 2.57,
+                "deg": 20
+            },
+            "clouds": {
+                "all": 0
+            },
+            "dt": 1713039666,
+            "sys": {
+                "type": 2,
+                "id": 268395,
+                "country": "JP",
+                "sunrise": 1713038984,
+                "sunset": 1713085972
+            },
+            "timezone": 32400,
+            "id": 1850144,
+            "name": "Tokyo",
+            "cod": 200
+        },
+        "fromCache": true
+    },
+    {
+        "data": {
+            "coord": {
+                "lon": 55.3047,
+                "lat": 25.2582
+            },
+            "weather": [
+                {
+                    "id": 801,
+                    "main": "Clouds",
+                    "description": "few clouds",
+                    "icon": "02n"
+                }
+            ],
+            "base": "stations",
+            "main": {
+                "temp": 300.15,
+                "feels_like": 300.06,
+                "temp_min": 299.31,
+                "temp_max": 300.29,
+                "pressure": 1009,
+                "humidity": 41
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 4.63,
+                "deg": 270
+            },
+            "clouds": {
+                "all": 20
+            },
+            "dt": 1713039771,
+            "sys": {
+                "type": 1,
+                "id": 7537,
+                "country": "AE",
+                "sunrise": 1713059815,
+                "sunset": 1713105640
+            },
+            "timezone": 14400,
+            "id": 292223,
+            "name": "Dubai",
+            "cod": 200
+        },
+        "fromCache": false
+    }
+]
