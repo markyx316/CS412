@@ -1,0 +1,26 @@
+<div *ngIf="weatherData; else noData">
+    <mat-card *ngFor="let data of weatherData" class="weather-card">
+        <mat-card-header>
+            <div mat-card-avatar class="weather-icon">
+                <img src="http://openweathermap.org/img/wn/{{ data.data.weather[0].icon }}.png">
+            </div>
+            <mat-card-title>{{ data.data.name }} ({{ data.data.sys.country }})</mat-card-title>
+            <mat-card-subtitle>{{ data.data.weather[0].main }} - {{ data.data.weather[0].description }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p><strong>Temperature:</strong> {{ data.data.main.temp }}K ({{ ((data.data.main.temp-273.15) | number:'1.0-1') }}°C)</p>
+            <p><strong>Weather:</strong> {{ data.data.weather[0].main }} - {{ data.data.weather[0].description }}</p>
+            <p><strong>Wind:</strong> {{ data.data.wind.speed }} m/s, {{ data.data.wind.deg }} degrees</p>
+            <p><strong>Humidity:</strong> {{ data.data.main.humidity }}%</p>
+            <p><strong>Pressure:</strong> {{ data.data.main.pressure }} hPa</p>
+            <p><strong>Cloudiness:</strong> {{ data.data.clouds.all }}%</p>
+            <p>Data from cache: {{ data.fromCache ? 'Yes' : 'No' }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div style="text-align: center">
+    <ng-template #noData><p>No weather data available.</p></ng-template>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+<div class="app-container">
+    <div class="header">
+      <h1>Weather Finder</h1>
+      <p>Enter city name to find out the current weather conditions.</p>
+    </div>
+    
+    <app-weather-form (search)="fetchWeather($event)" class="weather-form"></app-weather-form>
+</div>
+
+<div class="weather-data-container">
+    <app-weather-display [weatherData]="weatherData"></app-weather-display>
+</div>
+  
