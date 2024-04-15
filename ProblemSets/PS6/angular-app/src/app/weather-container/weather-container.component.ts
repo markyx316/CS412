@@ -1,15 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-weather-container',
-//   standalone: true,
-//   imports: [],
-//   templateUrl: './weather-container.component.html',
-//   styleUrl: './weather-container.component.css'
-// })
-// export class WeatherContainerComponent {
-
-// }
 import { Component } from '@angular/core';
 import { WeatherService } from '../weather.service';
 import { WeatherFormComponent } from '../weather-form/weather-form.component';
@@ -32,8 +20,7 @@ export class WeatherContainerComponent {
   fetchWeather(cities: string[]) {
     this.weatherService.getWeather(cities).subscribe(
       data => {
-        // this.weatherData = [data, ...[data, data]]; // Duplicates data to demonstrate ngFor
-        this.weatherData = [data];
+        this.weatherData = data;
       },
       error => {
         console.error('Failed to fetch weather', error);

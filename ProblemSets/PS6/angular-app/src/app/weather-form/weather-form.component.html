@@ -1,8 +1,8 @@
 <div class="weather-form">
     <form (ngSubmit)="submitForm()" #weatherForm="ngForm">
         <mat-form-field appearance="fill">
-            <mat-label>Enter City Name</mat-label>
-            <input matInput required minlength="3" [(ngModel)]="cityName" name="city" #city="ngModel" placeholder="Enter one city at a time">
+            <mat-label>Enter City Name(s)</mat-label>
+            <input matInput required minlength="3" [(ngModel)]="cityName" name="city" #city="ngModel" placeholder="c1, c2, ...">
             <mat-error *ngIf="city.errors?.['required']">
                 City name is required.
             </mat-error>
