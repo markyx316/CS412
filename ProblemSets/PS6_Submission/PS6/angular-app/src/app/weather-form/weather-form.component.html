@@ -1,0 +1,20 @@
+<div class="weather-form">
+    <form (ngSubmit)="submitForm()" #weatherForm="ngForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter City Name(s)</mat-label>
+            <input matInput required minlength="3" [(ngModel)]="cityName" name="city" #city="ngModel" placeholder="c1, c2, ...">
+            <mat-error *ngIf="city.errors?.['required']">
+                City name is required.
+            </mat-error>
+            <mat-error *ngIf="city.errors?.['minlength']">
+                Each city name must be at least 3 characters.
+            </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!weatherForm.valid">Query</button>
+    </form>
+</div>
+
+
+  
+
+

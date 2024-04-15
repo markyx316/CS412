@@ -1,0 +1,31 @@
+<div class="weather-data-container">
+    <ng-container *ngIf="weatherData; else noData">
+        <mat-card *ngFor="let item of weatherData" class="weather-card">
+            <mat-card-header>
+                <div mat-card-avatar class="weather-icon">
+                    <img src="http://openweathermap.org/img/wn/{{ item.data.weather[0].icon }}.png">
+                </div>
+                <mat-card-title>{{ item.data.name }}, {{ item.data.sys.country }}</mat-card-title>
+                <mat-card-subtitle>{{ item.data.weather[0].main }} - {{ item.data.weather[0].description }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p><strong>Temperature:</strong> {{ item.data.main.temp | number: '1.0-0' }}°C</p>
+                <p><strong>Feels like:</strong> {{ item.data.main.feels_like | number: '1.0-0' }}°C</p>
+                <p><strong>Wind:</strong> {{ item.data.wind.speed }} m/s at {{ item.data.wind.deg }} degrees</p>
+                <p><strong>Humidity:</strong> {{ item.data.main.humidity }}%</p>
+                <p><strong>Pressure:</strong> {{ item.data.main.pressure }} hPa</p>
+                <p><strong>Cloudiness:</strong> {{ item.data.clouds.all }}%</p>
+            </mat-card-content>
+            <mat-card-footer>
+                <p><small class="text-muted">Last updated: {{ item.data.dt | date: 'medium' }}</small></p>
+                <p><small class="text-muted">Data from cache: {{ item.fromCache ? 'Yes' : 'No' }}</small></p>
+            </mat-card-footer>
+        </mat-card>
+    </ng-container>
+    <ng-template #noData>
+        <p>No weather data available.</p>
+    </ng-template>
+</div>
+
+
+

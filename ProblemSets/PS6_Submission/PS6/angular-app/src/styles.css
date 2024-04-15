@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.weather-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-form {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+}
+@media (max-width: 768px) {
+    .weather-card {
+        flex: 0 1 100%; /* Takes full width on smaller screens */
+    }
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.weather-data-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.weather-card {
+    flex: 0 1 300px;
+    margin: 10px;
+    width: 400px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.text-muted {
+    color: #6c757d;
+}
